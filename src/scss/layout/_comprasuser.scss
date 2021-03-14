@@ -1,0 +1,176 @@
+h1{
+    text-align: center;
+}
+
+.contenedor_compra{
+    text-align: center;
+    padding: 2rem;
+    font-family: $fuentePrincipal;
+
+    hr{
+        width: 90%;
+        @include tablet{
+            width: 80%;
+        }
+        border: none;
+        border-top: 2px solid #e1e1e1;
+    }
+}
+
+
+.info_compra{
+    margin: 0 auto;
+    width: 90%;
+    @include tablet{
+        width: 80%;
+    }
+
+    @include tablet{
+        display: flex;
+        justify-content: center;
+    }
+    background-color: #ECECEC;
+
+    .info_compra-1{
+        display: flex;
+        gap: 1.2rem;
+        width: 100%;
+        @include tablet{
+            width: 80%; 
+        }
+    }
+    .info_compra-2{
+        width: 100%;
+        @include tablet{
+            width: 20%;
+        }
+        span{
+            color: #2EB805;
+        }
+    }
+
+    .info_compra-1, .info_compra-2{
+        border: 1px solid #E1E1E1;
+        padding: 1rem;
+        p{
+            margin: 0;
+            span{
+                font-weight: $gruesa;
+            }
+        }
+    }
+}
+
+.info_direccion{
+    border: 1px solid #E1E1E1;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 90%;
+    align-items: center;
+    @include tablet{
+        width: 80%;
+    }
+    background-color: #ECECEC;
+    .info_compra-1{
+        display: flex;
+        gap: 1.2rem;
+        width: 100%;
+        @include tablet{
+            width: 80%; 
+        }
+        p{
+            margin: 0;
+            span{
+                font-weight: $gruesa;
+            }
+        }
+    }
+}    
+
+.h2_productos{
+    padding: 1rem 0;
+    margin: 0 auto;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    width: 90%;
+    @include tablet{
+        width: 80%;
+    }
+}
+
+.info_productos{
+    margin: 0 auto;
+    width: 90%;
+    @include tablet{
+        width: 80%;
+    }
+
+    @include tablet{
+        display: flex;
+        justify-content: start;
+    }
+    border: 1px solid #E1E1E1;
+
+    .img_producto{
+        @include tablet{
+            width: 30%;
+        }
+    }
+    .informacion_producto{
+        padding: 1rem;
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    .informacion_producto-1{
+        @include tablet{
+            text-align: start;
+        }
+        h2{
+            font-size: 3rem;
+            
+        }
+        p{
+            font-size: 2rem;     
+            span{
+                font-weight: $gruesa;
+            } 
+        }
+    }
+
+    .informacion_producto-2{
+        @include tablet{
+            text-align: end;
+        }
+        p{
+            margin: 0;
+            font-size: 2rem;
+            span{
+                font-weight: $gruesa;
+            } 
+        }
+    }
+}
+
+.total_compra{
+    background-color: #ECECEC;
+    border: 1px solid #E1E1E1;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 90%;
+    @include tablet{
+        width: 80%;
+        text-align: end;
+    }
+
+    p{
+        margin: 0;
+        font-size: 2rem;
+        span{
+            font-weight: $gruesa;
+        } 
+    }
+}

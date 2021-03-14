@@ -1,0 +1,175 @@
+.header{
+    padding: 1rem 1rem 1rem 0;
+    font-family: $fuentePrincipal;
+    @include grid(1, $separacion/2);
+    align-items: center;
+    background-color: $negro;
+
+    .btn-menu{
+        padding: $separacion/4;
+
+        img{
+            width: 5%;
+        }
+    }
+
+    @include tablet{
+        .btn-menu{
+            display: none;
+        }
+
+        &{
+            @include grid(3, $separacion/2);
+
+            .barra_navegacion{
+                grid-column: 2/6;
+            }
+        }
+
+    }
+
+    .logo-header{
+        text-align: center;
+        padding-left: 1rem;
+
+        img{
+            width: 50%;
+        }
+        @include tablet{
+            &{
+                text-align: start;
+            }
+
+            img{
+                width: 40%;
+            }
+        }
+    }
+}
+
+.barra_navegacion{
+    padding: 1rem;
+}
+
+.navegacion{
+    display: none;
+    @include tablet{
+        display: flex;
+        justify-content: space-evenly;
+        padding: .2rem 0;
+        text-align: center;
+
+        a{
+            padding: 0 $separacion/2;
+            font-size: 1.2rem;
+            font-weight: $gruesa;
+            color: $amarillo;
+        }
+
+        .active, .enlace-nav:hover{
+            color: $blanco;
+            text-decoration: none;
+        }
+    }
+    @include desktop{
+        a{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.menu-items{
+    z-index: 99;
+    padding: 0;
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 4.6rem);
+    background: rgba(76, 75, 76, 1);
+    top: -150vh;
+    text-align: center;
+    transition: all .4s;
+    list-style: none;
+
+    li{
+        margin: 1.5rem 0 0 0;
+        line-height: 2rem;
+        list-style: none;
+        padding: $separacion/2 0;
+
+        a{
+            font-size: 2.5rem;
+            color: $amarillo;
+
+            &:hover{
+                color: $blanco;
+                text-decoration: none;
+            }
+        }
+    }
+
+    hr{
+        background-color: #bebebe;
+        width: 90%;
+    }   
+}
+
+ul.show{
+    top: 4.7rem;
+}
+
+.div_inferior{
+    border-top: 1px solid #b1b1b1;
+    background-color: $negro;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 3rem;
+
+    i{
+        font-size: 1.5rem;
+        color: $amarillo;
+
+        &:hover{
+            color: $blanco;
+            cursor: pointer;
+        }
+
+        @include desktop{
+            &{
+                font-size: 3rem;
+            }
+        }
+    }
+    a:hover{
+        text-decoration: none;
+    }
+}
+
+.usuario{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+
+    p{
+        margin: 0;
+        font-size: 1.5rem;
+        color: $blanco;
+        font-family: $fuentePrincipal;
+    }
+
+    &:hover{
+        p,i{
+            color: $amarillo; 
+        }
+    }
+}
+
+.none{
+    display: none;
+    @include tablet{
+        display: flex;
+    }
+}

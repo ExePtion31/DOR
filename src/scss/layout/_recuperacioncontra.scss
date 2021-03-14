@@ -1,0 +1,47 @@
+.div_contenedor_mensaje{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70rem;
+}
+
+
+.contenedor_mensaje{
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 1rem 1rem 1rem #e1e1e1;
+    border-radius: 1rem;
+
+    img{
+        width: 20%;
+    }
+
+    hr{
+        height: 2px;
+        border: none;
+        background-color: #e1e1e1;
+        width: 90%;
+    }
+
+    h2{
+        font-size: 3rem;
+        font-weight: $gruesa;
+    }
+
+    span{
+        font-weight: $gruesa;
+    }
+
+    a{
+        margin: 1.5rem;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}

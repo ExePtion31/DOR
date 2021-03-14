@@ -1,0 +1,46 @@
+.contacto-bg {
+    background-image: url(../img/fondo.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    font-size: 1.5rem;
+    background-color: $blanco;
+    margin: -5rem auto 3rem auto;
+    width: 95%;
+    padding: 2rem 0;
+
+    @include tablet{
+        &{
+            font-size: 2rem;
+            padding: 2rem;
+        }
+    }
+}
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+    font-family: $fuentePrincipal;
+    .campo__label {
+        flex: 0 0 9rem;
+        padding-right: 2rem;
+        text-align: right;
+    }
+
+    .campo__field {
+        flex: 1;
+        border: 1px solid #e1e1e1;
+        border-radius: 1rem;
+        margin-right: 1rem;
+    }
+    .campo__field--textarea {
+        height: 20rem;
+    }
+
+    &:last-of-type{
+        padding: 0 2rem;
+    }
+}
+

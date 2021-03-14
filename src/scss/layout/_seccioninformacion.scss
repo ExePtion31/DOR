@@ -1,0 +1,53 @@
+.seccion{
+    font-family: $fuentePrincipal;
+    padding: $separacion/4;
+
+    .icono{
+        text-align: center;
+        padding: 3rem;
+        margin: 1rem;
+        border-radius: .8rem;
+    }
+
+    @include tablet{
+        .iconos-nosotros {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    img{
+        width: 30%;
+    }
+
+    p{
+        font-size: 2rem;
+    }
+
+    h3 {
+        text-transform: uppercase;
+        margin: 1rem;
+        font-size: 3rem;
+        font-weight: $gruesa;
+        color: $amarillo;
+    }   
+
+    @include tablet{
+        p{
+            font-size: 1rem;
+        }
+        h3{
+            font-size: 1.5rem;
+        }
+    }
+
+    @include desktop{
+        p{
+            font-size: 2rem;
+        }
+        h3{
+            font-size: 3rem;
+        }
+    }
+
+}

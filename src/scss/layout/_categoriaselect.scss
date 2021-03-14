@@ -1,0 +1,73 @@
+.cont_buscador{
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    .buscador{
+        margin: 0;
+    }
+}
+
+.buscador{
+    padding: 1rem;
+    display: block;
+    width: 70%;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #e1e1e1;
+    margin: 2rem auto;
+
+    @include tablet{
+        width: 40%;
+    }
+}
+
+.div_seccion{
+    margin-bottom: 10rem;
+    @include tablet{
+        @include grid(2, $separacion/2);
+        row-gap: 2rem;
+    }
+
+    @include desktop{
+        @include grid(4, $separacion/2);
+        row-gap: 2rem;
+    }
+    .producto{
+        font-family: $fuentePrincipal;
+        padding: 2rem 1rem;
+        text-align: center;
+        border: 1px solid #e1e1e1;
+        margin-top: 2rem;
+        border-radius: .7rem;
+        box-shadow: .5rem .5rem 2rem #b1b1b1;
+
+        a:hover{
+            text-decoration: none;
+
+        }
+
+        h2{
+            font-size: 3rem;
+        }
+    }
+
+    p{
+        font-size: 3rem;
+        font-weight: $gruesa;
+    }
+}
+
+.info_producto{
+    padding-left: 2rem;
+    text-align: left;
+    p{
+        font-size: 2rem;
+        font-weight: $gruesa;
+
+        span{
+            font-weight: $delgada;
+        }
+    }
+}

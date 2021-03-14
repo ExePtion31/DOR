@@ -1,0 +1,28 @@
+{
+  "name": "dor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SASS",
+    "HTML",
+    "JS",
+    "CSS"
+  ],
+  "author": "Giovanni Baquero Vargas",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-webp": "^4.0.1"
+  }
+}

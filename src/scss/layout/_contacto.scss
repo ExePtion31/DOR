@@ -1,0 +1,90 @@
+.contactos{
+    margin-top: $separacion;
+    background-color: $negro;
+    font-family: $fuentePrincipal;
+    
+    @include desktop{
+        &{
+            @include grid(2, $separacion);
+        }
+    }
+
+    .mapa{
+        iframe{
+            width: 100%;
+            height: 50rem;
+        }
+    }
+
+
+    h3{
+        text-align: center;
+        color: $blanco;
+        text-shadow: 2px 2px 1px #7C7B7C;
+        font-size: 3rem;
+    }
+
+    @include tablet{
+        h3{
+            font-size: 6rem;
+        }
+    }
+
+    .redes{
+        display: flex;
+        flex-direction: column;
+        gap: $separacion;
+        
+    }
+
+    .red{
+        display: flex;
+        align-items: center;
+        gap: $separacion;
+
+        img{
+            width: 70%;
+
+            @include desktop{
+                width: 80%;
+            }
+        }
+
+        p{
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            color: #8A8686;
+            font-size: 2rem;
+
+            span{
+                color: $blanco;
+                font-size: 1.5rem;
+            }
+        }
+
+        picture{
+            width: 8%;
+        }
+
+        @include tablet{
+            picture{
+                width: 10%;
+            }
+        }
+
+        @include desktop{
+            p{
+                font-size: 3rem;
+
+                span{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .mapa, .redes{
+        padding: $separacion/2;
+    }
+}

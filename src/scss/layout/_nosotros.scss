@@ -1,0 +1,17 @@
+.sobre-nosotros{
+    font-family: $fuentePrincipal;
+    padding-bottom: 2rem;
+    @include tablet{
+        @include grid(2, $separacion/6);
+    }
+}
+
+.slidernosotros{
+    max-height: 60rem;
+    overflow: hidden;
+
+    img{
+        max-width: 100%;
+        z-index: -10;
+    }
+}

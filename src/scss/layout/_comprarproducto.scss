@@ -1,0 +1,166 @@
+.comprar_producto{
+    padding: 4rem;
+    font-family: $fuentePrincipal;
+
+    @include desktop{
+        @include grid(2, $separacion);
+    }
+
+    .img_producto{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+
+    h1{
+        font-size: 3rem;
+        font-weight: $gruesa;
+    }
+
+    hr{
+        border: none;
+        border-top: 1px solid #e1e1e1;
+    }
+
+    p{
+        font-size: 2rem;
+        line-height: 3.5rem;
+        @include tablet{
+            font-size: 1.5rem;
+        }
+    }
+
+    select, input{
+        border: none;
+        border-bottom: 1px solid #e1e1e1;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        width: 90%;
+        height: 6rem;
+        font-size: 2.5rem;
+        color: #b1b1b1;
+
+        @include tablet{
+            font-size: 1.5rem;
+            width: 50%;
+        }
+    }
+}
+
+.talla_producto{
+    margin-top: 2rem;
+    label{
+        display: block;
+        font-size: 2.5rem;
+        @include tablet{
+            font-size: 2rem;
+        }
+
+        span{
+            font-size: 2rem;
+            font-weight: $delgada;
+            color: #b1b1b1;
+
+            @include tablet{
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+}
+
+.cantidad_producto{
+    margin-top: 3rem;
+    label{
+        display: block;
+        font-size: 2.5rem;
+
+        @include tablet{
+            font-size: 2rem;
+        }
+    }
+}
+
+.tarjetas{
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+
+    p{
+        margin: 0;
+    }
+
+    .img-tar{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 3rem;
+
+        img{
+            width: 20%;
+
+            @include tablet{
+                width: 10%;
+            }
+        }
+    }
+}
+
+
+.precio_producto{
+    border-radius: 0 2rem;
+    margin-top: 4rem;
+    background-color: $negro;
+    padding: 3rem 2rem;
+    p{
+        font-size: 2.5rem;
+        color: $amarillo;
+        margin: 0;
+    }
+
+    span{
+        font-size: 5rem;
+        color: $amarillo;
+        font-weight: $gruesa;
+        margin-bottom: 1rem;
+    }
+}
+
+.btn-carrito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #008FFF;
+    color: #fff;
+    cursor: pointer;
+
+    @include tablet{
+        width: 50%;
+    }
+
+    &:hover{
+        background-color: #006CFF;
+        input{
+            background-color: #006CFF;
+        }
+    }
+
+    input{
+        font-size: 2rem;;
+        width: 90%;
+        background-color: #008FFF;
+        color: $blanco;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    i{
+        font-size: 4rem;
+    }
+}

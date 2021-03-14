@@ -1,0 +1,161 @@
+.carrito{
+    padding: 2rem;
+    font-family: $fuentePrincipal;
+
+    .centrar{
+        text-align: center;
+    }
+
+    h3{
+        font-size: 3rem;
+        font-weight: $gruesa;
+        text-shadow: 1px 2px 2px $amarillo;
+    }
+
+    table{
+        th, td{
+            text-align: center;
+        }
+
+        th{
+            font-size: 2.5rem;
+            width: 1rem;
+        }
+
+        td{
+            font-size: 2rem;
+        }
+
+        img{
+            width: 100%;
+            @include tablet{
+                width: 30%; 
+            }
+        }
+    }
+
+    a{
+        text-decoration: none;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+
+    .deletecar{
+        margin: 0 auto;
+        text-align: center;
+        background-color: red;
+        padding: 1rem;
+        width: 50%;
+        border-radius: 1rem;
+        @include tablet{
+            width: 40%;
+        }
+        @include desktop{
+            width: 40%;
+        }
+
+        i{
+            color: $blanco;
+        }
+
+        &:hover{
+            cursor: pointer;
+            background-color: #B90606;
+        }
+    }
+
+    .total_carrito{
+        padding: 2rem;
+        margin-top: 2rem;
+        text-align: left;
+        background-color: #e1e1e1;
+        width: auto;
+        border-radius: 1rem;
+
+        h2{
+            color: $amarillo;
+            text-shadow: 1px 1px 1px $negro;
+            font-size: 2rem;
+
+            @include tablet{
+                font-size: 3rem;
+            }
+        }
+
+        hr{
+            width: 80%;
+            display: inline-block;
+            background-color: #e1e1e1;
+
+            @include tablet{
+                width: 30%;
+            }
+        }
+
+        p{
+            font-size: 1.5rem;
+            @include tablet{
+                font-size: 2rem; 
+            }
+        }
+    }
+
+    .carrito_vacio{
+        margin-top: 5rem;
+        padding: 4rem;
+        text-align: center;
+        i{
+            font-size: 15rem;
+            @include tablet{
+                font-size: 30rem; 
+            }
+        }
+    }
+}
+
+.btn-pagar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    width: 100%;
+    padding: 3rem 2rem;
+    font-size: 2rem;
+    background-color: #008FFF;
+    color: #fff;
+    cursor: pointer;
+
+    @include tablet{
+        width: 40%;
+    }
+    @include desktop{
+        width: 20%; 
+    }
+
+    &:hover{
+        background-color: #006CFF;
+    }
+
+    i{
+        font-size: 4rem;
+    }
+    p{
+        margin: 0;
+        margin-left: 1rem;
+    }
+}
+
+.compra_realizada{
+    margin-top: 10rem;
+    text-align: center;
+    padding: 3rem;
+
+    i{
+        font-size: 20rem;
+        color: #1EEF0D;
+    }
+    p{
+        font-size: 3rem;
+    }
+}
