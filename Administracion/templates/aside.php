@@ -156,6 +156,50 @@
               </li>
             </ul>
           </li>
+          <li class="nav-header">VENTAS</li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cash-register"></i>
+              <p>
+                Ventas
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="ventas.php?k=En Proceso" class="nav-link">
+                  <i class="fas fa-spinner nav-icon"></i>
+                  <p>En proceso</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="ventas.php?k=Enviadas" class="nav-link">
+                  <i class="fas fa-truck nav-icon"></i>
+                  <p>Enviado</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="ventas.php?k=Entregadas" class="nav-link">
+                  <i class="fas fa-check nav-icon"></i>
+                  <p>Entregado</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="ventas.php?k=Canceladas" class="nav-link">
+                  <i class="fas fa-ban nav-icon"></i>
+                  <p>Cancelado</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="histoventas.php" class="nav-link">
+              <i class="nav-icon fas fa-history""></i>
+              <p>
+                Historial de ventas
+              </p>
+            </a>
+          </li>
           <li class="nav-header">OTROS</li>
           <li class="nav-item">
             <a href="historial.php" class="nav-link">

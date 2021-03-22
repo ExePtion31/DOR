@@ -62,7 +62,6 @@
                 <hr>
                 <?php
                 $subtotalcarrito = 0;
-                $envio = 5000;
                 $totalcarrito = 0;
 
                 $arreglocarrito = $_SESSION['carrito'];
@@ -73,19 +72,33 @@
 
                 ?>
                 <p>Subtotal: <span>$<?php echo number_format($subtotalcarrito, 0, '', '.'); ?></span></p>
-                <p>Envío: <span>$<?php echo number_format($envio, 0, '', '.'); ?></span></p>
+                <p>Envío:
+                    <select id="ciudadenvio" name="ciudadenvio">
+                            <option value="" selected>-</option>
+                            <?php
+                            include("../conexion.php");
+                            $query = "SELECT * FROM ciudades_envio";
+                            $result = mysqli_query($conexiondb, $query);
+
+                            while ($row = mysqli_fetch_array($result)) {
+                            ?>
+                                <option value="<?php echo $row["id_ciudad"];?>"><?php echo $row["ciudad"];?></option>
+                            <?php
+                                }
+                            ?>
+                    </select>
+                </p>
                 <hr>
                 <?php
-                $totalcarrito = $subtotalcarrito + $envio
+                $totalcarrito = $subtotalcarrito;
                 ?>
                 <p><b>Total:</b> <span>$<?php echo number_format($totalcarrito, 0, '', '.'); ?></span></p>
             </div>
-            <a href="checkout.php">
+            <a href="checkout.php" id="btn_checkout">
                 <div class="btn-pagar">
                     <i class="fas fa-receipt"></i>
                     <p>Pagar</p>
                 </div>
-                
             </a>
         <?php }else{ ?>
                 <div class="carrito_vacio">

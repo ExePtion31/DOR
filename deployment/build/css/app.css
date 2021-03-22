@@ -1,0 +1,1949 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+  width: .7rem;
+  background: rgba(138, 134, 134, 0.7);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgba(71, 71, 71, 0.6);
+  border-radius: 1rem;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Merienda", cursive;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+body.fijar-body {
+  overflow: hidden;
+}
+
+p {
+  font-size: 2rem;
+}
+
+.contenedor {
+  max-width: 120rem;
+  width: 97%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: "Merienda", cursive;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.d-none {
+  display: none;
+}
+
+.titulos {
+  margin: 2rem 0;
+  font-size: 3rem;
+  color: #D6A426;
+  text-shadow: 2px 2px 1px #000;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .titulos {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .titulos {
+    font-size: 5rem;
+  }
+}
+
+.boton_comprar, .boton_primario {
+  margin: 0 auto;
+  width: 99%;
+  font-family: "Merienda", cursive;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 1rem;
+}
+
+.boton_comprar {
+  border: 2px solid #D6A426;
+  padding: 1rem 2rem;
+  display: block;
+  font-size: 2rem;
+  color: #D6A426;
+  font-weight: 700;
+}
+
+.boton_comprar:hover {
+  color: #fff;
+  background-color: #D6A426;
+}
+
+.boton_primario {
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: 3px solid #000;
+  background-color: #fff;
+}
+
+.boton_primario:hover {
+  border: 3px solid #D6A426;
+  color: #D6A426;
+}
+
+@media (min-width: 768px) {
+  .boton_primario {
+    width: 20%;
+  }
+}
+
+.btn_buscar {
+  text-align: center;
+  padding: 1rem;
+  width: 30%;
+  font-size: 2rem;
+  border: none;
+  border-radius: 1rem;
+  font-family: "Merienda", cursive;
+}
+
+.btn_buscar:hover {
+  background-color: #e1e1e1;
+}
+
+@media (min-width: 768px) {
+  .btn_buscar {
+    width: 12%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn_buscar {
+    width: 7%;
+  }
+}
+
+.error {
+  background-color: #b90000;
+  color: #fff;
+}
+
+.correcto {
+  background-color: #4ab900;
+  color: #fff;
+}
+
+.error, .correcto {
+  font-family: "Merienda", cursive;
+  text-align: center;
+  padding: 1rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .error, .correcto {
+    font-size: 2rem;
+  }
+}
+
+.header {
+  padding: 1rem 1rem 1rem 0;
+  font-family: "Merienda", cursive;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2.5rem;
+  align-items: center;
+  background-color: #000;
+}
+
+.header .btn-menu {
+  padding: 1.25rem;
+}
+
+.header .btn-menu img {
+  width: 5%;
+}
+
+@media (min-width: 768px) {
+  .header .btn-menu {
+    display: none;
+  }
+  .header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.5rem;
+  }
+  .header .barra_navegacion {
+    grid-column: 2/6;
+  }
+}
+
+.header .logo-header {
+  text-align: center;
+  padding-left: 1rem;
+}
+
+.header .logo-header img {
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .header .logo-header {
+    text-align: start;
+  }
+  .header .logo-header img {
+    width: 40%;
+  }
+}
+
+.barra_navegacion {
+  padding: 1rem;
+}
+
+.navegacion {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navegacion {
+    display: flex;
+    justify-content: space-evenly;
+    padding: .2rem 0;
+    text-align: center;
+  }
+  .navegacion a {
+    padding: 0 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #D6A426;
+  }
+  .navegacion .active, .navegacion .enlace-nav:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navegacion a {
+    font-size: 1.5rem;
+  }
+}
+
+.menu-items {
+  z-index: 99;
+  padding: 0;
+  position: fixed;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100% - 4.6rem);
+  background: #4c4b4c;
+  top: -150vh;
+  text-align: center;
+  transition: all .4s;
+  list-style: none;
+}
+
+.menu-items li {
+  margin: 1.5rem 0 0 0;
+  line-height: 2rem;
+  list-style: none;
+  padding: 2.5rem 0;
+}
+
+.menu-items li a {
+  font-size: 2.5rem;
+  color: #D6A426;
+}
+
+.menu-items li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-items hr {
+  background-color: #bebebe;
+  width: 90%;
+}
+
+ul.show {
+  top: 4.7rem;
+}
+
+.div_inferior {
+  border-top: 1px solid #b1b1b1;
+  background-color: #000;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 3rem;
+}
+
+.div_inferior i {
+  font-size: 1.5rem;
+  color: #D6A426;
+}
+
+.div_inferior i:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .div_inferior i {
+    font-size: 3rem;
+  }
+}
+
+.div_inferior a:hover {
+  text-decoration: none;
+}
+
+.usuario {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.usuario p {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: "Merienda", cursive;
+}
+
+.usuario:hover p, .usuario:hover i {
+  color: #D6A426;
+}
+
+.none {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .none {
+    display: flex;
+  }
+}
+
+.sliderinicio {
+  position: relative;
+  overflow: hidden;
+  max-height: 90rem;
+}
+
+.seccion {
+  font-family: "Merienda", cursive;
+  padding: 1.25rem;
+}
+
+.seccion .icono {
+  text-align: center;
+  padding: 3rem;
+  margin: 1rem;
+  border-radius: .8rem;
+}
+
+@media (min-width: 768px) {
+  .seccion .iconos-nosotros {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.seccion img {
+  width: 30%;
+}
+
+.seccion p {
+  font-size: 2rem;
+}
+
+.seccion h3 {
+  text-transform: uppercase;
+  margin: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #D6A426;
+}
+
+@media (min-width: 768px) {
+  .seccion p {
+    font-size: 1rem;
+  }
+  .seccion h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .seccion p {
+    font-size: 2rem;
+  }
+  .seccion h3 {
+    font-size: 3rem;
+  }
+}
+
+.sin_resultados {
+  margin: 10rem 0;
+  text-align: center;
+  width: 100%;
+  font-size: 10rem;
+}
+
+.video {
+  position: relative;
+  overflow: hidden;
+  max-height: 50rem;
+}
+
+.video .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+36,28343b+100&0.32+0,1+100;Grey+Black+3D */
+  background: -moz-linear-gradient(-45deg, rgba(181, 189, 200, 0.32) 0%, rgba(130, 140, 149, 0.56) 36%, #28343b 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(181, 189, 200, 0.32) 0%, rgba(130, 140, 149, 0.56) 36%, #28343b 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(181, 189, 200, 0.32) 0%, rgba(130, 140, 149, 0.56) 36%, #28343b 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52b5bdc8', endColorstr='#28343b',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.video video {
+  display: block;
+  width: 100%;
+}
+
+.contenido-video {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.contenido-video h2 {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-size: 3rem;
+  align-items: flex-start;
+  font-family: "Merienda", cursive;
+}
+
+.contenido-video h2 span {
+  background-color: #D6A426;
+  font-size: 1rem;
+  padding: .5rem;
+}
+
+@media (min-width: 768px) {
+  .contenido-video h2 {
+    font-size: 7rem;
+  }
+  .contenido-video h2 span {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+
+.float {
+  position: fixed;
+  width: 6rem;
+  height: 6rem;
+  bottom: 15px;
+  right: 15px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.float:hover {
+  text-decoration: none;
+  color: #25d366;
+  background-color: #fff;
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+.contactos {
+  margin-top: 5rem;
+  background-color: #000;
+  font-family: "Merienda", cursive;
+}
+
+@media (min-width: 1200px) {
+  .contactos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+  }
+}
+
+.contactos .mapa iframe {
+  width: 100%;
+  height: 50rem;
+}
+
+.contactos h3 {
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 1px #7C7B7C;
+  font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  .contactos h3 {
+    font-size: 6rem;
+  }
+}
+
+.contactos .redes {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.contactos .red {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.contactos .red img {
+  width: 70%;
+}
+
+@media (min-width: 1200px) {
+  .contactos .red img {
+    width: 80%;
+  }
+}
+
+.contactos .red p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: #8A8686;
+  font-size: 2rem;
+}
+
+.contactos .red p span {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.contactos .red picture {
+  width: 8%;
+}
+
+@media (min-width: 768px) {
+  .contactos .red picture {
+    width: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contactos .red p {
+    font-size: 3rem;
+  }
+  .contactos .red p span {
+    font-size: 2rem;
+  }
+}
+
+.contactos .mapa, .contactos .redes {
+  padding: 2.5rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 8rem;
+  margin-top: 2rem;
+  background-color: #2B2B2B;
+  padding: 1.25rem;
+  text-align: center;
+  font-family: "Merienda", cursive;
+}
+
+.footer p {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.contenedor_users {
+  font-family: "Merienda", cursive;
+  width: 100%;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.contenedor_users a:hover {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .contenedor_users {
+    font-size: 1rem;
+  }
+  .contenedor_users p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contenedor_users {
+    font-size: 1.5rem;
+  }
+  .contenedor_users p {
+    font-size: 1.5rem;
+  }
+}
+
+.contenedor_users input {
+  height: 4rem;
+  font-size: 1.5rem;
+}
+
+.contenedor_users .guardar {
+  width: 90%;
+  height: 5rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor_users .guardar {
+    width: 30%;
+    font-size: 1.5rem;
+  }
+}
+
+.contenedor_users h3 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor_users h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contenedor_users h3 {
+    font-size: 2rem;
+  }
+}
+
+.contenedor_users img {
+  width: 80%;
+}
+
+.contenedor_users .row {
+  margin-top: 2rem;
+}
+
+.compras_user {
+  width: 80%;
+  background-color: #0281FF;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  color: #fff;
+  border-radius: 1rem;
+  font-size: 2.5rem;
+}
+
+.compras_user p {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.compras_user:hover {
+  background-color: #026DFF;
+}
+
+@media (min-width: 768px) {
+  .compras_user {
+    width: 20%;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .compras_user p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .compras_user {
+    width: 15%;
+    font-size: 2rem;
+  }
+  .compras_user p {
+    font-size: 2rem;
+  }
+}
+
+.sobre-nosotros {
+  font-family: "Merienda", cursive;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .sobre-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.83333rem;
+  }
+}
+
+.slidernosotros {
+  max-height: 60rem;
+  overflow: hidden;
+}
+
+.slidernosotros img {
+  max-width: 100%;
+  z-index: -10;
+}
+
+.contacto-bg {
+  background-image: url(../img/fondo.jpg);
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.formulario {
+  font-size: 1.5rem;
+  background-color: #fff;
+  margin: -5rem auto 3rem auto;
+  width: 95%;
+  padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .formulario {
+    padding: 2rem;
+  }
+}
+
+.campo {
+  display: flex;
+  margin-bottom: 2rem;
+  font-family: "Merienda", cursive;
+}
+
+.campo .campo__label {
+  flex: 0 0 9rem;
+  padding-right: 2rem;
+  text-align: right;
+}
+
+.campo .campo__field {
+  flex: 1;
+  border: 1px solid #e1e1e1;
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+
+.campo .campo__field--textarea {
+  height: 20rem;
+}
+
+.campo:last-of-type {
+  padding: 0 2rem;
+}
+
+.categorias {
+  margin-top: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .categorias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 5rem;
+  }
+}
+
+.categorias a:hover {
+  text-decoration: none;
+}
+
+.categorias .myButton {
+  background-color: #D6A426;
+  border-radius: 42px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 7px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+  opacity: 0;
+}
+
+.categorias .div-categoria {
+  margin: 2rem auto;
+  width: 95%;
+  text-align: center;
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
+  border-radius: .7rem;
+  box-shadow: .5rem .5rem 2rem #b1b1b1;
+}
+
+@media (min-width: 768px) {
+  .categorias .div-categoria {
+    width: 80%;
+  }
+}
+
+.categorias .div-categoria .img-categoria {
+  height: 40rem;
+  overflow: hidden;
+}
+
+.categorias .div-categoria .img-categoria img {
+  width: 100%;
+  height: 100%;
+}
+
+.categorias .div-categoria hr {
+  border: 1px solid #e1e1e1;
+}
+
+.categorias .div-categoria:hover img, .categorias .div-categoria:hover h2, .categorias .div-categoria:hover hr {
+  opacity: .1;
+}
+
+.categorias .div-categoria:hover p {
+  opacity: 1;
+}
+
+.carrito {
+  padding: 2rem;
+  font-family: "Merienda", cursive;
+}
+
+.carrito .centrar {
+  text-align: center;
+}
+
+.carrito h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 1px 2px 2px #D6A426;
+}
+
+.carrito table th, .carrito table td {
+  text-align: center;
+}
+
+.carrito table th {
+  font-size: 2.5rem;
+  width: 1rem;
+}
+
+.carrito table td {
+  font-size: 2rem;
+}
+
+.carrito table img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .carrito table img {
+    width: 30%;
+  }
+}
+
+.carrito a {
+  text-decoration: none;
+}
+
+.carrito a:hover {
+  text-decoration: none;
+}
+
+.carrito .deletecar {
+  margin: 0 auto;
+  text-align: center;
+  background-color: red;
+  padding: 1rem;
+  width: 50%;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  .carrito .deletecar {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carrito .deletecar {
+    width: 40%;
+  }
+}
+
+.carrito .deletecar i {
+  color: #fff;
+}
+
+.carrito .deletecar:hover {
+  cursor: pointer;
+  background-color: #B90606;
+}
+
+.carrito .total_carrito {
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: left;
+  background-color: #e1e1e1;
+  width: auto;
+  border-radius: 1rem;
+}
+
+.carrito .total_carrito h2 {
+  color: #D6A426;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .carrito .total_carrito h2 {
+    font-size: 3rem;
+  }
+}
+
+.carrito .total_carrito hr {
+  width: 80%;
+  display: inline-block;
+  background-color: #e1e1e1;
+}
+
+@media (min-width: 768px) {
+  .carrito .total_carrito hr {
+    width: 30%;
+  }
+}
+
+.carrito .total_carrito p {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .carrito .total_carrito p {
+    font-size: 2rem;
+  }
+}
+
+.carrito .carrito_vacio {
+  margin-top: 5rem;
+  padding: 4rem;
+  text-align: center;
+}
+
+.carrito .carrito_vacio i {
+  font-size: 15rem;
+}
+
+@media (min-width: 768px) {
+  .carrito .carrito_vacio i {
+    font-size: 30rem;
+  }
+}
+
+.btn-pagar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  width: 100%;
+  padding: 3rem 2rem;
+  font-size: 2rem;
+  background-color: #008FFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .btn-pagar {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn-pagar {
+    width: 20%;
+  }
+}
+
+.btn-pagar:hover {
+  background-color: #006CFF;
+}
+
+.btn-pagar i {
+  font-size: 4rem;
+}
+
+.btn-pagar p {
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.compra_realizada {
+  margin-top: 10rem;
+  text-align: center;
+  padding: 3rem;
+}
+
+.compra_realizada i {
+  font-size: 20rem;
+  color: #1EEF0D;
+}
+
+.compra_realizada p {
+  font-size: 3rem;
+}
+
+.checkout {
+  padding: 2rem;
+}
+
+.row {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%;
+  /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%;
+  /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%;
+  /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn-checkout {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+.ciudades {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.contenedor_compra {
+  text-align: center;
+  padding: 2rem;
+  font-family: "Merienda", cursive;
+}
+
+.contenedor_compra hr {
+  width: 90%;
+  border: none;
+  border-top: 2px solid #e1e1e1;
+}
+
+@media (min-width: 768px) {
+  .contenedor_compra hr {
+    width: 80%;
+  }
+}
+
+.contenedor_compra .info_usuario {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ECECEC;
+  border: 1px solid #E1E1E1;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor_compra .info_usuario {
+    width: 80%;
+  }
+}
+
+.contenedor_compra .info_usuario p {
+  margin: 0;
+}
+
+.contenedor_compra .info_usuario p span {
+  font-weight: 700;
+}
+
+.contenedor_compra .info_usuario p:last-of-type {
+  text-align: left;
+}
+
+.contenedor_compra .info_usuario .info_usuarios2 {
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .contenedor_compra .info_usuario .info_usuarios2 {
+    display: flex;
+    gap: 1.2rem;
+  }
+}
+
+.info_compra {
+  margin: 0 auto;
+  width: 90%;
+  background-color: #ECECEC;
+}
+
+@media (min-width: 768px) {
+  .info_compra {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .info_compra {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.info_compra .info_compra-1 {
+  display: flex;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .info_compra .info_compra-1 {
+    width: 80%;
+  }
+}
+
+.info_compra .info_compra-2 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .info_compra .info_compra-2 {
+    width: 20%;
+  }
+}
+
+.info_compra .info_compra-2 span {
+  color: #2EB805;
+}
+
+.info_compra .info_compra-1, .info_compra .info_compra-2 {
+  border: 1px solid #E1E1E1;
+  padding: 1rem;
+}
+
+.info_compra .info_compra-1 p, .info_compra .info_compra-2 p {
+  margin: 0;
+}
+
+.info_compra .info_compra-1 p span, .info_compra .info_compra-2 p span {
+  font-weight: 700;
+}
+
+.info_direccion {
+  border: 1px solid #E1E1E1;
+  padding: 1rem;
+  margin: 0 auto;
+  width: 90%;
+  align-items: center;
+  background-color: #ECECEC;
+}
+
+@media (min-width: 768px) {
+  .info_direccion {
+    width: 80%;
+  }
+}
+
+.info_direccion .info_compra-1 {
+  display: flex;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .info_direccion .info_compra-1 {
+    width: 80%;
+  }
+}
+
+.info_direccion .info_compra-1 p {
+  margin: 0;
+}
+
+.info_direccion .info_compra-1 p span {
+  font-weight: 700;
+}
+
+.h2_productos {
+  padding: 1rem 0;
+  margin: 0 auto;
+  border-left: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .h2_productos {
+    width: 80%;
+  }
+}
+
+.info_productos {
+  margin: 0 auto;
+  width: 90%;
+  border: 1px solid #E1E1E1;
+}
+
+@media (min-width: 768px) {
+  .info_productos {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .info_productos {
+    display: flex;
+    justify-content: start;
+  }
+}
+
+@media (min-width: 768px) {
+  .info_productos .img_producto {
+    width: 30%;
+  }
+}
+
+.info_productos .informacion_producto {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .info_productos .informacion_producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .info_productos .informacion_producto-1 {
+    text-align: start;
+  }
+}
+
+.info_productos .informacion_producto-1 h2 {
+  font-size: 3rem;
+}
+
+.info_productos .informacion_producto-1 p {
+  font-size: 2rem;
+}
+
+.info_productos .informacion_producto-1 p span {
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .info_productos .informacion_producto-2 {
+    text-align: end;
+  }
+}
+
+.info_productos .informacion_producto-2 p {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.info_productos .informacion_producto-2 p span {
+  font-weight: 700;
+}
+
+.total_compra {
+  background-color: #ECECEC;
+  border: 1px solid #E1E1E1;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .total_compra {
+    width: 80%;
+    text-align: end;
+  }
+}
+
+.total_compra p {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.total_compra p span {
+  font-weight: 700;
+}
+
+.cont_buscador {
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cont_buscador .buscador {
+  margin: 0;
+}
+
+.buscador {
+  padding: 1rem;
+  display: block;
+  width: 70%;
+  font-size: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #e1e1e1;
+  margin: 2rem auto;
+}
+
+@media (min-width: 768px) {
+  .buscador {
+    width: 40%;
+  }
+}
+
+.div_seccion {
+  margin-bottom: 10rem;
+}
+
+@media (min-width: 768px) {
+  .div_seccion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .div_seccion {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 2rem;
+  }
+}
+
+.div_seccion .producto {
+  font-family: "Merienda", cursive;
+  padding: 2rem 1rem;
+  text-align: center;
+  border: 1px solid #e1e1e1;
+  margin-top: 2rem;
+  border-radius: .7rem;
+  box-shadow: .5rem .5rem 2rem #b1b1b1;
+}
+
+.div_seccion .producto a:hover {
+  text-decoration: none;
+}
+
+.div_seccion .producto h2 {
+  font-size: 3rem;
+}
+
+.div_seccion p {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.info_producto {
+  padding-left: 2rem;
+  text-align: left;
+}
+
+.info_producto p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.info_producto p span {
+  font-weight: 300;
+}
+
+.comprar_producto {
+  padding: 4rem;
+  font-family: "Merienda", cursive;
+}
+
+@media (min-width: 1200px) {
+  .comprar_producto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+  }
+}
+
+.comprar_producto .img_producto {
+  width: 100%;
+}
+
+.comprar_producto .img_producto img {
+  width: 100%;
+}
+
+.comprar_producto h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.comprar_producto hr {
+  border: none;
+  border-top: 1px solid #e1e1e1;
+}
+
+.comprar_producto p {
+  font-size: 2rem;
+  line-height: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .comprar_producto p {
+    font-size: 1.5rem;
+  }
+}
+
+.comprar_producto select, .comprar_producto input {
+  border: none;
+  border-bottom: 1px solid #e1e1e1;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  width: 90%;
+  height: 6rem;
+  font-size: 2.5rem;
+  color: #b1b1b1;
+}
+
+@media (min-width: 768px) {
+  .comprar_producto select, .comprar_producto input {
+    font-size: 1.5rem;
+    width: 50%;
+  }
+}
+
+.talla_producto {
+  margin-top: 2rem;
+}
+
+.talla_producto label {
+  display: block;
+  font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .talla_producto label {
+    font-size: 2rem;
+  }
+}
+
+.talla_producto label span {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #b1b1b1;
+}
+
+@media (min-width: 768px) {
+  .talla_producto label span {
+    font-size: 1.5rem;
+  }
+}
+
+.cantidad_producto {
+  margin-top: 3rem;
+}
+
+.cantidad_producto label {
+  display: block;
+  font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .cantidad_producto label {
+    font-size: 2rem;
+  }
+}
+
+.tarjetas {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.tarjetas p {
+  margin: 0;
+}
+
+.tarjetas .img-tar {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 3rem;
+}
+
+.tarjetas .img-tar img {
+  width: 20%;
+}
+
+@media (min-width: 768px) {
+  .tarjetas .img-tar img {
+    width: 10%;
+  }
+}
+
+.precio_producto {
+  border-radius: 0 2rem;
+  margin-top: 4rem;
+  background-color: #000;
+  padding: 3rem 2rem;
+}
+
+.precio_producto p {
+  font-size: 2.5rem;
+  color: #D6A426;
+  margin: 0;
+}
+
+.precio_producto span {
+  font-size: 5rem;
+  color: #D6A426;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.btn-carrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  width: 100%;
+  padding: 1.2rem;
+  background-color: #008FFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .btn-carrito {
+    width: 50%;
+  }
+}
+
+.btn-carrito:hover {
+  background-color: #006CFF;
+}
+
+.btn-carrito:hover input {
+  background-color: #006CFF;
+}
+
+.btn-carrito input {
+  font-size: 2rem;
+  width: 90%;
+  background-color: #008FFF;
+  color: #fff;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-carrito i {
+  font-size: 4rem;
+}
+
+.cont_formulario_login {
+  align-items: center;
+}
+
+.loginwallpaper {
+  background-image: url(../../build/img/fondologin.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.loginwallpaper .volver {
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  background-color: #0072FB;
+  color: #fff;
+  margin: 1rem;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  border-top: 3px solid #fff;
+  width: 20%;
+}
+
+@media (min-width: 768px) {
+  .loginwallpaper .volver {
+    width: 15%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .loginwallpaper .volver {
+    width: 10%;
+  }
+}
+
+.loginwallpaper .volver:hover {
+  background-color: #0054FB;
+}
+
+.loginwallpaper .volver p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.formulario_login {
+  background-color: #fff;
+  border-top: 1rem solid #D6A426;
+  padding-top: 2rem;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 1rem #bebebe;
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1200px) {
+  .formulario_login {
+    width: 50%;
+  }
+}
+
+.formulario_login img {
+  width: 85%;
+}
+
+.formulario_login p {
+  font-family: "Merienda", cursive;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .formulario_login p {
+    font-size: 5rem;
+  }
+}
+
+.formulario_login hr {
+  width: 90%;
+  border: none;
+  border-top: 2px solid #e1e1e1;
+}
+
+.formulario_login form {
+  text-align: center;
+  width: 95%;
+  margin: 4rem auto;
+}
+
+.formulario_login form input[type="submit"] {
+  margin-top: 2rem;
+  width: 90%;
+}
+
+@media (min-width: 1200px) {
+  .formulario_login form input[type="submit"] {
+    width: 40%;
+  }
+}
+
+.input-icono-password, .input-icono-login, .input-icono-mail, .input-icono-phone {
+  margin: 2rem auto;
+  background-repeat: no-repeat;
+  background-position: .1rem center;
+  background-size: 9%;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  padding-left: 3.5rem;
+  height: 5rem;
+  border: none;
+  border-radius: 1rem;
+  border-bottom: 1px solid #bebebe;
+}
+
+@media (min-width: 768px) {
+  .input-icono-password, .input-icono-login, .input-icono-mail, .input-icono-phone {
+    background-size: 5%;
+    padding-left: 5rem;
+  }
+}
+
+.input-icono-password input, .input-icono-login input, .input-icono-mail input, .input-icono-phone input {
+  font-family: "Merienda", cursive;
+  width: 100%;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.input-icono-password input:focus, .input-icono-login input:focus, .input-icono-mail input:focus, .input-icono-phone input:focus {
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .input-icono-password input, .input-icono-login input, .input-icono-mail input, .input-icono-phone input {
+    font-size: 2rem;
+  }
+}
+
+.input-icono-login {
+  background-image: url("../img/login.png");
+}
+
+.input-icono-password {
+  background-image: url("../img/password.png");
+}
+
+.input-icono-mail {
+  background-image: url("../img/correo.png");
+}
+
+.input-icono-phone {
+  background-image: url("../img/phone.png");
+}
+
+.extras_login {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e1e1e1;
+  font-family: "Merienda", cursive;
+}
+
+.extras_login a {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.extras_login a:hover {
+  text-decoration: none;
+  color: #D6A426;
+}
+
+@media (min-width: 768px) {
+  .extras_login a {
+    font-size: 1.7rem;
+  }
+}
+
+.div_contenedor_mensaje {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70rem;
+}
+
+.contenedor_mensaje {
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: 1rem 1rem 1rem #e1e1e1;
+  border-radius: 1rem;
+}
+
+.contenedor_mensaje img {
+  width: 20%;
+}
+
+.contenedor_mensaje hr {
+  height: 2px;
+  border: none;
+  background-color: #e1e1e1;
+  width: 90%;
+}
+
+.contenedor_mensaje h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.contenedor_mensaje span {
+  font-weight: 700;
+}
+
+.contenedor_mensaje a {
+  margin: 1.5rem;
+}
+
+.contenedor_mensaje a:hover {
+  text-decoration: none;
+}

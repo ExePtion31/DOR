@@ -11,13 +11,18 @@
 <!--Preload-->  <!-- Google Font: Source Sans Pro -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
-<!-- Font Awesome -->
+<!-- Admin LTE -->
 <link rel="preload" href="css/all.min.css" as="style">
 <link rel="stylesheet" href="css/all.min.css">
 
 <!-- Font Awesome -->
 <link rel="preload" href="css/styles.css" as="style">
 <link rel="stylesheet" href="css/styles.css">
+
+<!-- Hoja de estilos -->
+<link rel="preload" href="css/styles.css" as="style">
+<link rel="stylesheet" href="../build/css/app.css">
+
 
 <!-- Theme style -->
 <link rel="preload" href="css/adminlte.css" as="style">

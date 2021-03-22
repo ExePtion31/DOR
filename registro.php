@@ -10,19 +10,24 @@
     ?>
 </head>
 
-<body>
+<body class="loginwallpaper">
 
     <?php
     include('php/whatsapp.php');
-    include('php/header.php');
     ?>
 
     <main class="cont_login">
+        <a href="index.php" class="text-decoration-none">
+            <div class="volver">
+                <i class="fas fa-arrow-left"></i>
+                <p>Volver</p>
+            </div>
+        </a>
         <div class="cont_formulario_login">
             <div class="formulario_login">
                 <p>Registro</p>
                 <hr>
-                <img src="build/img/perron.png" alt="Imagen Login">
+                <img src="build/img/Logopag.png" alt="Imagen Login">
                 <form action="php/registrarusu.php" method="post" id="crear_usuarios">
                     <div class="input-icono-login">
                         <input type="text" placeholder="Nombre completo" name="nombre" required>

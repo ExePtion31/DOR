@@ -70,6 +70,7 @@
                             <img src="../build/img/visa.png" alt="Imágen Visa">
                             <img src="../build/img/mastercard.png" alt="Imágen MasterCard">
                             <img src="../build/img/paypal.png" alt="Imágen Paypal">
+                            <img src="../build/img/mercadopago.jpg" alt="Imágen Mercadopago">
                         </div>
                     </div>
                     <div class="precio_producto">
@@ -81,7 +82,6 @@
                         <i class="fas fa-cart-plus"></i>
                         <input type="submit" value="Agregar al carrito">
                     </div>
-
                 </form>
             </div>
         </main>

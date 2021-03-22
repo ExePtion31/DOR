@@ -7,6 +7,7 @@
         $valor = $_POST['valor'];
         $desc = $_POST['desc'];
         $categoria = $_POST['categoria'];
+        $animal = $_POST['animal'];
         
         if($_FILES['imagen']['name'] != null){
             try{
@@ -16,8 +17,8 @@
                 $archivo = $_FILES['imagen']['tmp_name'];
                 $subir = move_uploaded_file($archivo, $ruta);
     
-                $stmt = $conexiondb->prepare('UPDATE productos SET nombre = ?, categoria = ?, img = ?, descripcion = ?, valor = ? WHERE id = ?');
-                $stmt->bind_param("ssssii", $nombre, $categoria, $ruta, $desc, $valor ,$id);
+                $stmt = $conexiondb->prepare('UPDATE productos SET nombre = ?, categoria = ?, img = ?, animal = ? ,descripcion = ?, valor = ? WHERE id = ?');
+                $stmt->bind_param("sssssii", $nombre, $categoria, $ruta, $animal ,$desc, $valor ,$id);
                 $stmt->execute();
     
                 if($stmt->affected_rows){
@@ -38,8 +39,8 @@
         }else{
             try {
                 include('../../conexion.php');
-                $stmt = $conexiondb->prepare('UPDATE productos SET nombre = ?, categoria = ?, descripcion = ?, valor = ? WHERE id = ?');
-                $stmt->bind_param("sssii", $nombre, $categoria, $desc, $valor ,$id);
+                $stmt = $conexiondb->prepare('UPDATE productos SET nombre = ?, categoria = ?, animal = ? ,descripcion = ?, valor = ? WHERE id = ?');
+                $stmt->bind_param("ssssii", $nombre, $categoria, $animal ,$desc, $valor ,$id);
                 $stmt->execute();
     
                 if($stmt->affected_rows){

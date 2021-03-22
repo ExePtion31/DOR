@@ -424,6 +424,13 @@ ul.show {
   }
 }
 
+.sin_resultados {
+  margin: 10rem 0;
+  text-align: center;
+  width: 100%;
+  font-size: 10rem;
+}
+
 .video {
   position: relative;
   overflow: hidden;
@@ -770,7 +777,6 @@ ul.show {
 
 @media (min-width: 768px) {
   .formulario {
-    font-size: 2rem;
     padding: 2rem;
   }
 }
@@ -1105,7 +1111,7 @@ ul.show {
   border-radius: 3px;
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"], input[type="number"] {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
@@ -1190,6 +1196,42 @@ h1 {
 @media (min-width: 768px) {
   .contenedor_compra hr {
     width: 80%;
+  }
+}
+
+.contenedor_compra .info_usuario {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ECECEC;
+  border: 1px solid #E1E1E1;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor_compra .info_usuario {
+    width: 80%;
+  }
+}
+
+.contenedor_compra .info_usuario p {
+  text-align: left;
+  margin: 0;
+}
+
+.contenedor_compra .info_usuario p span {
+  font-weight: 700;
+}
+
+
+
+.contenedor_compra .info_usuario .info_usuarios2 {
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .contenedor_compra .info_usuario .info_usuarios2 {
+    display: flex;
+    gap: 1.2rem;
   }
 }
 
@@ -1674,7 +1716,51 @@ h1 {
   align-items: center;
 }
 
+.loginwallpaper {
+  background-image: url(../../build/img/fondologin.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.loginwallpaper .volver {
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  background-color: #0072FB;
+  color: #fff;
+  margin: 1rem;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  border-top: 3px solid #fff;
+  width: 20%;
+}
+
+@media (min-width: 768px) {
+  .loginwallpaper .volver {
+    width: 15%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .loginwallpaper .volver {
+    width: 10%;
+  }
+}
+
+.loginwallpaper .volver:hover {
+  background-color: #0054FB;
+}
+
+.loginwallpaper .volver p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 .formulario_login {
+  background-color: #fff;
   border-top: 1rem solid #D6A426;
   padding-top: 2rem;
   border-radius: 1rem;
@@ -1693,7 +1779,7 @@ h1 {
 }
 
 .formulario_login img {
-  width: 60%;
+  width: 85%;
 }
 
 .formulario_login p {
@@ -1766,7 +1852,7 @@ h1 {
 
 @media (min-width: 768px) {
   .input-icono-password input, .input-icono-login input, .input-icono-mail input, .input-icono-phone input {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -1859,4 +1945,60 @@ h1 {
 
 .contenedor_mensaje a:hover {
   text-decoration: none;
+}
+
+.botones_pago{
+  text-align: center;
+}
+
+.mercadopago-button{
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 3px;
+  font-size: 4rem;
+}
+
+.btn_mercadopago{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btn_mercadopago h2{
+  font-size: 1.5rem;
+}
+
+.btn_mercadopago img{
+  width: 30%;
+}
+
+.btn_mercadopago .mercadopago-button{
+  font-size: 1.5rem;
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .btn_mercadopago .mercadopago-button{
+    font-size: 2rem;
+    width: 50%;
+  }
+
+  .btn_mercadopago h2{
+    font-size: 3rem;
+  }
+
+  .btn_mercadopago img{
+    width: 15%;
+  }
+}
+
+.metodosdepago_div{
+  width: 70%;
+  padding: 2rem;
+  margin: 10rem auto;
+  border: 1px solid #e1e1e1;
+  
 }

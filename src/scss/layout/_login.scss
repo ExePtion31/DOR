@@ -2,7 +2,46 @@
     align-items: center;
 }
 
+.loginwallpaper{
+    background-image: url(../../build/img/fondologin.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .volver{
+        display: flex;
+        justify-content: start;
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem;
+        background-color: #0072FB;
+        color: $blanco;
+        margin: 1rem;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+        border-top: 3px solid #fff;
+        width: 20%;
+        @include tablet{
+            width: 15%;
+        }
+
+        @include desktop{
+            width: 10%;
+        }
+
+        &:hover{
+            background-color: #0054FB;
+        }
+
+        p{
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: $gruesa;
+        }
+    }
+}
+
 .formulario_login{
+    background-color: $blanco;
     border-top: 1rem solid $amarillo;
     padding-top: 2rem;
     border-radius: 1rem;
@@ -18,7 +57,7 @@
     }
 
     img{
-        width: 60%;
+        width: 85%;
     }
 
     p{
@@ -89,7 +128,7 @@
 
         &{
             @include tablet{
-                font-size: 3rem;
+                font-size: 2rem;
             }
         }
     }

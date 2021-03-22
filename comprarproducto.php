@@ -18,10 +18,7 @@
     while ($row = mysqli_fetch_array($result)) {
     ?>
         <title><?php echo $row['nombre'] ?></title>
-        <meta name="description" content="Comprar <?php echo $row['nombreProducto'] ?>">
-
-        <link rel="preload" href="build/css/app.css" as="style">
-        <link rel="stylesheet" href="build/css/app.css">
+        <meta name="description" content="Comprar <?php echo $row['nombre'] ?>">
     <?php } ?>
 
     <?php
@@ -81,7 +78,7 @@
                 <a href="login.php">
                     <div class="btn-carrito">
                         <i class="fas fa-cart-plus"></i>
-                        Agregar al carrito
+                        <input type="submit" value="Agregar al carrito">
                     </div>
                 </a>
             </div>

@@ -15,6 +15,36 @@ h1{
         border: none;
         border-top: 2px solid #e1e1e1;
     }
+
+    .info_usuario{
+        width: 90%;
+        margin: 0 auto;
+        background-color: #ECECEC;
+        @include tablet{
+            width: 80%; 
+        }
+        border: 1px solid #E1E1E1;
+        padding: 1rem;
+        p{
+            margin: 0;
+            span{
+                font-weight: $gruesa;
+            }
+
+            &:last-of-type{
+                text-align: left;
+            }
+        }
+        .info_usuarios2{
+            text-align: left;
+        }
+        @include tablet{
+            .info_usuarios2{
+                display: flex;
+                gap: 1.2rem;
+            }
+        }
+    }
 }
 
 
@@ -154,6 +184,7 @@ h1{
         }
     }
 }
+
 
 .total_compra{
     background-color: #ECECEC;

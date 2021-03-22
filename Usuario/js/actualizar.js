@@ -128,7 +128,7 @@ $(document).ready(function(){
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Por favor, digite su nombre completo.'
-              })
+            })
         }else if($('#email').val().trim() === ''){        
             Swal.fire({
                 icon: 'error',
@@ -152,36 +152,6 @@ $(document).ready(function(){
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Por favor, digite su código postal.'
-            })
-        }else if($('#cname').val().trim() === ''){        
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Por favor, digite su nombre en la tarjeta.'
-            })
-        }else if($('#ccnum').val().trim() === ''){        
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Por favor, digite su número de tarjeta.'
-            })
-        }else if($('#expmonth').val().trim() === ''){        
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Por favor, seleccione el mes de expedición.'
-            })
-        }else if($('#expyear').val().trim() === ''){        
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Por favor, seleccione el año de expedición.'
-            })
-        }else if($('#cvv').val().trim() === ''){        
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Por favor, digite el ccv.'
             })
         }else{
             $.ajax({
@@ -212,4 +182,21 @@ $(document).ready(function(){
         }              
     });
 
+    //VALIDAD ENVIO CIUDAD
+    $('#btn_checkout').on('click',function(e){
+        e.preventDefault();
+
+        if($("#ciudadenvio").val().trim() === ""){
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Por favor, seleccione una ciudad de envio.'
+            })
+        }else{
+            precio = $("#ciudadenvio").val().trim();
+            window.location.href = "checkout.php?k="+precio;         
+        }
+    });
+
 })
+

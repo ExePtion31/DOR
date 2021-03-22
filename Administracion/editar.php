@@ -152,9 +152,9 @@
                                             <?php
                                             require('../conexion.php');
                                             $query2 = "SELECT * FROM categorias";
-                                            $result = mysqli_query($conexiondb, $query2);
+                                            $result2 = mysqli_query($conexiondb, $query2);
 
-                                            while ($row2 = mysqli_fetch_array($result)) {
+                                            while ($row2 = mysqli_fetch_array($result2)) {
                                             ?>
                                                 <option value="<?php echo $row2['nombre']; ?>"><?php echo $row2['nombre']; ?></option>
                                             <?php } ?>
@@ -162,16 +162,16 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Animal</label>
-                                        <select class="form-control" name="categoria">
+                                        <select class="form-control" name="animal">
                                             <option value="<?php echo $row['animal']; ?>" selected>--<?php echo $row['animal']; ?>--</option>
                                             <?php
                                             require('../conexion.php');
-                                            $query2 = "SELECT * FROM animales";
-                                            $result = mysqli_query($conexiondb, $query2);
+                                            $query3 = "SELECT * FROM animales";
+                                            $result3 = mysqli_query($conexiondb, $query3);
 
-                                            while ($row2 = mysqli_fetch_array($result)) {
+                                            while ($row3 = mysqli_fetch_array($result3)) {
                                             ?>
-                                                <option value="<?php echo $row2['nombre']; ?>"><?php echo $row2['nombre']; ?></option>
+                                                <option value="<?php echo $row3['nombre']; ?>"><?php echo $row3['nombre']; ?></option>
                                             <?php } ?>
                                         </select>
                                     </div>

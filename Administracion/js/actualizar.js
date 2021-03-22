@@ -181,4 +181,41 @@ $(document).ready(function(){
             }
           })
     });
+
+    /* ACTUALIZAR VENTA */
+    $('.actualizarventa').on('submit',function(e){
+        e.preventDefault();
+
+        var datos = new FormData(this);
+        $.ajax({
+            type: $(this).attr('method'),
+            data : datos,
+            url: $(this).attr('action'),
+            dataType: 'json',
+            contentType: false,
+            processData: false, 
+            async: true,
+            cache: false,
+            success: function(data){
+                var resultado = data;
+                if(resultado.respuesta == "Exito"){
+                    Swal.fire(
+                        'Correcto',
+                        'Registro actualizado exitosmente.',
+                        'success'
+                    )
+                    setTimeout(function() {
+                        location.reload();         
+                    }, 2000);
+                }else{
+                    Swal.fire(
+                        'Error',
+                        'Hubo un error al actualizar el registro.',
+                        'error'
+                    )
+                }
+            }
+        })
+    });
+
 })

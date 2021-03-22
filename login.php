@@ -5,6 +5,7 @@ if (isset($_GET['cerrar_sesion'])) {
 
     if ($cerrar_sesion) {
         session_destroy();
+        header("Location: index.php");
     }
 }
 
@@ -22,19 +23,24 @@ if (isset($_GET['cerrar_sesion'])) {
     ?>
 </head>
 
-<body>
+<body class="loginwallpaper">
 
     <?php
     include('php/whatsapp.php');
-    include('php/header.php');
     ?>
 
     <main class="cont_login">
+        <a href="index.php" class="text-decoration-none">
+            <div class="volver">
+                <i class="fas fa-arrow-left"></i>
+                <p>Volver</p>
+            </div>
+        </a>
         <div class="cont_formulario_login">
             <div class="formulario_login">
                 <p>Iniciar Sesión</p>
                 <hr>
-                <img src="build/img/perro.png" alt="Imagen Login">
+                <img src="build/img/Logopag.png" alt="Imagen Login">
                 <form action="php/loginusuarios.php" id="login_usuarios" name="login_usuarios" method="POST">
                     <div class="input-icono-mail">
                         <input type="text" name="email" placeholder="Correo Electrónico">
@@ -51,7 +57,6 @@ if (isset($_GET['cerrar_sesion'])) {
             </div>
         </div>
     </main>
-
     <?php
     include('php/footer.php');
     ?>

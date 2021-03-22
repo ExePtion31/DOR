@@ -5,9 +5,10 @@
     $mensaje = $_POST['mensaje'];
     $asuntom = $_POST['asunto'];
 
-    $header = 'From: ' . "Formulario de Contacto." . "\r\n ";
-    $header .= "Reply-To: contactosdor@dorsobaka.com";
-    $header .= "X-Mailer: PHP/" . phpversion() . "\r\n ";
+    $para = 'dorsobaka2021@gmail.com';
+    $cabeceras = 'From: webmaster@example.com' . "\r\n" .
+        'Reply-To: webmaster@example.com' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
     
 
     $mensaje = "Este mensaje fue enviado por: ". $nombre . "\r\n ";
@@ -17,11 +18,9 @@
     $mensaje .= "Enviado el: " . date('d/m/Y', time());
 
 
-    $para = 'dorsobaka2021@gmail.com';
-
-    $validacion = @mail($para, $asuntom, utf8_decode($mensaje), $header);
+    
   
-    if($validacion){
+    if(mail($para, $asuntom, utf8_decode($mensaje), $cabeceras)){
         $respuesta = array(
             'respuesta' => 'Exito'
         );

@@ -21,7 +21,7 @@
     include('../conexion.php');
     $id = $_SESSION['id'];
 
-    $query = "SELECT * FROM ventas WHERE id_usuario = '$id'";
+    $query = "SELECT * FROM ventas WHERE id_usuario = '$id' ORDER BY id_venta DESC";
     $result = mysqli_query($conexiondb, $query);
 
     while ($row = mysqli_fetch_array($result)) {
@@ -43,6 +43,8 @@
                     <p>Dirección: <span><?php echo $row['direccion'] ?></span></p>
                     <p>|</p>
                     <p>Ciudad: <span><?php echo $row['ciudad'] ?></span></p>
+                    <p>|</p>
+                    <p>Metodo: <span><?php echo $row['metodo'] ?></span></p>
                 </div>
             </div>
             <div class="h2_productos">
@@ -70,12 +72,10 @@
                     </div>
                 </div>
             <?php
-                $total = $total + ($productos[$i]['Precio'] * $productos[$i]['Cantidad']);
             }
             ?>
             <div class="total_compra">
-                <p>Envio: <span>$5.000</span></p>
-                <p>Total: <span>$<?php echo number_format($total + 5000, 0, '', '.'); ?></span></p>
+                <p>Total con envío: <span>$<?php echo number_format($row['total'], 0, '', '.'); ?></span></p>
             </div>
             <hr>
         </div>

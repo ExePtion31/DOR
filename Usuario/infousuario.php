@@ -144,9 +144,7 @@
         <thead>
           <tr>
             <th>Nombre</th>
-            <th>ID</th>
             <th>Teléfono</th>
-            <th>Rol</th>
             <th>Correo</th>
             <th>Fecha</th>
             <th>Acción</th>
@@ -155,37 +153,25 @@
         <tbody>
           <?php
           include('../conexion.php');
-          $query = "SELECT * FROM historial_usuarios WHERE idUsuario = '$id'";
+          $query = "SELECT * FROM historial_usuarios WHERE idUsuario = '$id' ORDER BY id_registro DESC";
           $result = mysqli_query($conexiondb, $query);
 
           while ($row = mysqli_fetch_array($result)) {
           ?>
             <tr>
               <td><?php echo ($row['nombreUsuario']) ?></td>
-              <td><?php echo ($row['idUsuario']) ?></td>
               <td><?php echo ($row['telefonoUsuario']) ?></td>
-              <?php
-              $rolusuario = $row['rolUsuario'];
-              $query2 = "SELECT * FROM roles WHERE idRol = '$rolusuario'";
-              $result2 = mysqli_query($conexiondb, $query2);
-
-              while ($row2 = mysqli_fetch_array($result2)) {
-              ?>
-                <td><?php echo ($row2['nombreRol']) ?></td>
-              <?php } ?>
               <td><?php echo ($row['correoUsuario']) ?></td>
               <td><?php echo ($row['fecha']) ?></td>
               <td><?php echo ($row['Estado']) ?></td>
             </tr>
-          <?php } ?>
+          <?php }  ?>
         </tbody>
         <tfoot>
           <tr>
             <th>Nombre</th>
-            <th>ID</th>
             <th>Correo</th>
             <th>Teléfono</th>
-            <th>Rol</th>
             <th>Fecha</th>
             <th>Acción</th>
           </tr>
