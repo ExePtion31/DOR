@@ -71,7 +71,7 @@ $arreglo = $_SESSION['carrito'];
                                 <label for="email"><i class="fa fa-envelope"></i> Email</label>
                                 <input type="email" id="email" name="email" placeholder="correo@example.com" required>
                                 <label for="adr"><i class="fa fa-address-card-o"></i> Dirección</label>
-                                <input type="text" id="adr" name="address" placeholder="Dirección" pattern="[A-Za-z0-9 ,.-]{1,70}" title="No ingrese carácteres especiales '#°@?'" required>
+                                <input type="text" id="adr" name="address" placeholder="Dirección" title="No ingrese carácteres especiales '#°@?'" required>
                                 <label for="city"><i class="fa fa-institution"></i> Ciudad</label>
                                 <select class="ciudades" id="city" name="city">
                                     <?php

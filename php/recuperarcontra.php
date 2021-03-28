@@ -1,37 +1,47 @@
 <?php
-
     require('../conexion.php');
-    $conexion = $conexiondb;
     $email = $_POST['email'];
-    $asuntom = 'Reestablecimiento de contraseña.';
+    $conexion = $conexiondb;
       
     if(validarUsu($email, $conexion) == 1){
-        $sql = "SELECT * FROM usuarios WHERE correoUsuario='$email'";
+      try {
+        require __DIR__ .  '../../vendor/autoload.php';
+        $password = $_POST['password'];
+        $opciones = array(
+          'cost' => 12
+        );
+        $password_hashed = password_hash($password, PASSWORD_BCRYPT, $opciones);
+        $asuntom = 'Reestablecimiento de contraseña.';
+    
+        $stmt = $conexiondb->prepare('UPDATE usuarios SET passUsuario = ? WHERE correoUsuario = ?');
+        $stmt->bind_param("ss", $password_hashed, $email);
+        $stmt->execute();
 
-        $result = mysqli_query($conexion, $sql);
-        while($row = mysqli_fetch_array($result)){
-            $header = 'From: ' . "Reestablecimiento de contraseña." . "\r\n ";
-            $header .= "Reply-To: contactosdor@dorsobaka.com";
-            $header .= "X-Mailer: PHP/" . phpversion() . "\r\n ";
-            
-            $mensaje = "Sus datos de inicio de sesión son los siguiente:" . "\r\n ";
-            $mensaje .= "Correo electrónico: ". $row['correoUsuario'] . "\r\n ";
-            $mensaje .= "Contraseña: " . $row['passUsuario'] . "\r\n ";
-            $mensaje .= "Enviado el: " . date('d/m/Y', time());
-
-
-            $para = $row['correoUsuario'];
-
-            $validacion = @mail($para, $asuntom, utf8_decode($mensaje), $header);
+        if($stmt->affected_rows){
+          require('mail.php');
+          $respuesta = array(
+            'respuesta' => 'Exito'
+          );
+        }else{
+          $respuesta = array(
+            'respuesta' => 'Herror'
+          ); 
         }
+      }catch (Exception $e) {
+        echo "Error:" . $e->getMessage();  
+      }
+      $stmt->close();
+      $conexiondb ->close();  
 
-        echo "<script>location.href='../contraenviada.php'</script>";
     }else{
-      
-        echo "<script>location.href='../contranoenviada.php'</script>";
+      $respuesta = array(
+        'respuesta' => 'No Existe'
+      );
     }
 
+    die(json_encode($respuesta));
 
+    
     function validarUsu($email, $conexion){
       $sql = "SELECT * FROM usuarios WHERE correoUsuario='$email'";
 

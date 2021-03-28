@@ -108,4 +108,99 @@ $(document).ready(function(){
             }
         })
     });
+
+    /*FORMULARIO CONTACTO*/
+    $('#form_recovery').on('submit',function(e){
+        e.preventDefault();
+
+        var email = $('#reset_email').val();
+        if(email.length == 0){
+            return  Swal.fire(
+                'Advertencia',
+                'Llena el campo de <b>Correo electrónico</b>.',
+                'warning'
+            );
+        }else{
+            var caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            var password = "";
+    
+            for(var i=0;i<8;i++){
+                password+=caracteres.charAt(Math.floor(Math.random()*caracteres.length));
+            }
+            $.ajax({
+                url: $(this).attr('action'),
+                type: $(this).attr('method'),
+                data:{email: email, password : password},
+                success: function(data){
+                    var resultado = data;
+                    if(resultado[14] == "E"){
+                        Swal.fire(
+                            'Mensaje enviado',
+                            'Hemos enviado un mensaje a su correo electrónico.',
+                            'success'
+                        )
+                    }else if(resultado[14] == "H"){
+                        Swal.fire(
+                            'Error',
+                            'Hubo un error, por favor intentalo de nuevo.',
+                            'error'
+                        )
+                    }else if(resultado[14] == "N"){
+                        Swal.fire(
+                            'Error',
+                            'El correo no se encuentra registrado.',
+                            'error'
+                        )
+                    }
+                }
+            });
+        }
+    });
 })
+
+function reestablecer_contra(){
+    var email = $('#reset_email').val();
+    if(email.length == 0){
+        return  Swal.fire(
+            'Advertencia',
+            'Llena el campo de <b>Correo electrónico</b>.',
+            'warning'
+        );
+    }else{
+        var caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        var password = "";
+
+        for(var i=0;i<8;i++){
+            password+=caracteres.charAt(Math.floor(Math.random()*caracteres.length));
+        }
+        console.log(password);
+        $.ajax({
+            url: 'php/recuperarcontra.php',
+            type: 'POST',
+            data:{email: email, password : password},
+            success: function(data){
+                var resultado = data;
+                console.log(resultado.respuesta);
+                if(resultado.respuesta == "Exito"){
+                    Swal.fire(
+                        'Mensaje enviado',
+                        'Hemos enviado un mensaje a su correo electrónico.',
+                        'success'
+                    )
+                }else if(resultado.respuesta == "Error"){
+                    Swal.fire(
+                        'Error',
+                        'Hubo un error, por favor intentalo de nuevo.',
+                        'error'
+                    )
+                }else if(resultado.respuesta == "No Existe"){
+                    Swal.fire(
+                        'Error',
+                        'El correo no se encuentra registrado.',
+                        'error'
+                    )
+                }
+            }
+        });
+    }
+}

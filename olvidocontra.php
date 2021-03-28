@@ -3,7 +3,7 @@
 
 <head>
     <title>Reestablecer contraseña</title>
-    <meta name="description" content="Inicia sesión en DOR">
+    <meta name="description" content="Reestablecer Contraseña">
 
     <?php
     include('php/head.php');
@@ -28,9 +28,9 @@
                 <p>Recuperar Contraseña</p>
                 <hr>
                 <img src="build/img/Logopag.png" alt="Imagen Login">
-                <form action="php/recuperarcontra.php" method="POST">
+                <form action="php/recuperarcontra.php" method="POST" id="form_recovery">
                     <div class="input-icono-mail">
-                        <input type="mail" name="email" placeholder="Correo electrónico">
+                        <input type="mail" name="email" placeholder="Correo electrónico" id="reset_email">
                     </div>
                     <input type="submit" value="Enviar" class="boton_primario">
                 </form>

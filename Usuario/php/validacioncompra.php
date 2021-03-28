@@ -1,17 +1,19 @@
 <?php
     session_start();
-    extract($_POST);
     include('../../conexion.php');
-
+    
+    echo serialize($_SESSION['informacion']);   
+   
     if(isset($_SESSION['carrito'])){
+        $informacion = $_SESSION['informacion'];
         $id_usuario = $_SESSION['id'];
         $productos = serialize($_SESSION['carrito']);
-        $direccion = $_GET['dir'];
-        $metodo = $_GET['metodo'];
-        $_ciudad = $_GET['city'];
-        $zip = $_GET['zip'];
+        $direccion = $informacion[0]['direccion'];
+        $metodo = $informacion[0]['metodo'];
+        $_ciudad = $informacion[0]['city'];
+        $zip = $informacion[0]['zip'];
         $estado = 'En proceso';
-        $total = $_GET['total'];
+        $total = $informacion[0]['total'];
         $fecha = date('Y-m-d H:i:s');
         
 
@@ -31,11 +33,8 @@
                     
                 }
                 include("mail.php");
+                unset($_SESSION['informacion']);
                 header('Location: ../infousuario.php');
-            }else{
-                $respuesta = array(
-                    'respuesta' => 'Error'
-                ); 
             }
 
         } catch (Exception $e) {

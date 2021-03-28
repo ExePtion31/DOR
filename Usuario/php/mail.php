@@ -2,8 +2,8 @@
     $para= $correou;
     $asunto = 'Gracias por tu compra en Tiendas DOR';
     $from = 'dorsobaka2021@gmail.com';
-    $cabeceras = 'From: webmaster@example.com' . "\r\n" .
-        'Reply-To: webmaster@example.com' . "\r\n" .
+    $cabeceras = 'From: dorsobaka2021@gmail.com' . "\r\n" .
+        'Reply-To: dorsobaka2021@gmail.com' . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
 
     $mensaje = '
@@ -44,7 +44,7 @@
 </body>
 </html>';
 
-if(mail($para, $asunto, $mensaje , $cabeceras)){
+if(mail($para, $asunto, utf8_decode($mensaje) , $cabeceras)){
 
 }else{
 
